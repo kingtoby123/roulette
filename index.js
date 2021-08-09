@@ -16,3 +16,14 @@ function roulette(){
     randomNumber += random 
     return randomNumber
 }
+
+function choosenNumber(number){
+    let choosenNumber
+    while (!choosenNumber){
+        let userInput = prompt(`\nWhat number would you like to bet on?\n`)
+        choosenNumber = numbers[number][userInput]
+        if(!choosenNumber){
+            console.log("Sorry we don't have that number to bet on, please try again")
+        }
+    }
+}
