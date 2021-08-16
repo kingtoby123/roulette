@@ -10,40 +10,50 @@
 // cash out or lose
 
 
-const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35]
+const numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36]
 let wallet = 100
 let bets = []
+let myNumber = []
+let myAmount = []
 
-// indent properly
 function roulette(){
-random = numbers[Math.floor(Math.random()* numbers.length)]
-return random
+    random = numbers[Math.floor(Math.random()* numbers.length)]
+        return random
 }
 
+function choosenNumber () {
+    let choosenNumber  
+    while (!choosenNumber) {
+        let numberInput = prompt(`\nPlease pick a number between the numbers from 1 and 36\n`)
+        myNumber = numberInput 
+        break
+    }
 
-function bet (number) {
-let bet 
-while (!bet ) {
-let numberInput = prompt(`\nWhat ${number} would you like to bet on?\n`)
-numberInput = bets[numbers]
-if (!bet) {
-  console.log("that number is not valid, please try again.")
-}
-}
-
-bets = numberInput
-
+    console.log("Great choice! that's my lucky number")
 }
 
-function combine(){
-if(choosenNumber === roulette){
-    return(amount*35)
+function amount(){
+    let amount 
+    while(!amount){
+        let amountInput = prompt(`\nNow, please put the amount you want to bet!\n`)
+        myAmount = amountInput
+        break
+    }
+
+    console.log("Big Spender!")
 }
-}
+
 
 
 console.log("Welcome to the roulette table! try your luck and win big!")
 console.log(`\nhere is your wallet, spend your money wrecklessly! your total is $${wallet}`)
-console.log("\nPick a number between 1 and 35")
-bet("number")
+// betTwo("amount")
+choosenNumber()
+amount()
+console.log()
+
+
+
+
+
 
